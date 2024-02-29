@@ -1,0 +1,203 @@
+<div class="divsection-03">
+  <div class="section-container">
+    <h2>About Us</h2>
+
+    <div class="row-1">
+      <div class="column-1 image left">
+        <div class="star-icon">
+          <svg
+            width="92"
+            height="112"
+            viewBox="0 0 92 112"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+              fill="#363B3E" />
+          </svg>
+        </div>
+        <img
+          src="{{ section.settings.section_03_row1_image |  image_url }}"
+          alt="{{ section.settings.section_03_row3_image_alt }}"
+        >
+      </div>
+      <div class="column-2 text right">
+        <h3>{{ section.settings.section_03_row1_title }}</h3>
+        {{ section.settings.section_03_row1_text }}
+      </div>
+    </div>
+
+    <div class="row-2">
+      <div class="column-2 text left">
+        <h3>{{ section.settings.section_03_row2_title }}</h3>
+        {{ section.settings.section_03_row2_text }}
+      </div>
+      <div class="column-1 image right">
+        <div class="star-icon">
+          <svg
+            width="92"
+            height="112"
+            viewBox="0 0 92 112"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+              fill="#363B3E" />
+          </svg>
+        </div>
+        <img
+          src="{{ section.settings.section_03_row2_image |  image_url }}"
+          alt="{{ section.settings.section_03_row3_image_alt }}"
+        >
+      </div>
+    </div>
+
+    <div class="row-3">
+      <div class="column-1 image left">
+        <div class="star-icon">
+          <svg
+            width="92"
+            height="112"
+            viewBox="0 0 92 112"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+              fill="#363B3E" />
+          </svg>
+        </div>
+        <img
+          src="{{ section.settings.section_03_row3_image | image_url }}"
+          alt="{{ section.settings.section_03_row3_image_alt }}"
+        >
+      </div>
+      <div class="column-2 text right">
+        <h3>{{ section.settings.section_03_row3_title }}</h3>
+        {{ section.settings.section_03_row3_text }}
+      </div>
+    </div>
+
+    <div class="banner-and-cta">
+      {{ section.settings.section_03_banner_text }}
+      <div class="btn-primary">
+        <a href="{{ section.settings.section_03_banner_cta_url }}">
+          {{ section.settings.section_03_banner_cta_text }}
+          <svg
+            width="15"
+            height="10"
+            viewBox="0 0 15 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 5L1 5M14 5L10 9M14 5L10 1"
+              stroke="black"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Section 3",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_03_row1_title",
+      "label": "Row 1 - Title",
+      "default": "Potential ROI"
+    },
+    {
+      "type": "richtext",
+      "id": "section_03_row1_text",
+      "label": "Row 1 - Text",
+      "default": "<p>Whether you are looking to buy a fixer-upper or renovate your current home for sale, we will walk you through potential returns for projects.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_03_row1_image",
+      "label": "Row 1 - image"
+    },
+    {
+      "type": "text",
+      "id": "section_03_row1_image_alt",
+      "label": "Row 1 - image Alt Text"
+    },
+    {
+      "type": "text",
+      "id": "section_03_row2_title",
+      "label": "Row 2 - Title",
+      "default": "Design"
+    },
+    {
+      "type": "richtext",
+      "id": "section_03_row2_text",
+      "label": "Row 2 - Text",
+      "default": "<p>Our background in interior design makes the perfect guide through your design optionsand coordinating contractors to complete the home upgrade..</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_03_row2_image",
+      "label": "Row 2 - Image"
+    },
+    {
+      "type": "text",
+      "id": "section_02_row3_image_alt",
+      "label": "Row 2 - Image Alt Text"
+    },
+    {
+      "type": "text",
+      "id": "section_03_row3_title",
+      "label": "Row 3 - Title",
+      "default": "Marketing"
+    },
+    {
+      "type": "richtext",
+      "id": "section_03_row3_text",
+      "label": "Row 3 - Text",
+      "default": "<p>Staging consultation, professional photos and a sophisticated digital marketing planaccompany every listing to reach today's buyers.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_03_row3_image",
+      "label": "Row 3 - Image"
+    },
+    {
+      "type": "text",
+      "id": "section_03_row3_image_alt",
+      "label": "Row 3 - Image Alt Text"
+    },
+    {
+      "type": "richtext",
+      "id": "section_03_banner_text",
+      "label": "Banner - Text",
+      "default": "<p>Fifteen years of experience in real estate, excellent customer service and a commitment to work hard, listen and follow through. We provide quality service to build relationships with clients and, more importantly, maintain those relationships by communicating effectively.</p>"
+    },
+    {
+      "type": "text",
+      "id": "section_03_banner_cta_text",
+      "label": "Banner - CTA Text",
+      "default": "Contact Us"
+    },
+    {
+      "type": "text",
+      "id": "section_03_banner_cta_url",
+      "label": "Banner - CTA URL",
+      "default": "#"
+    }
+  ]
+}
+{% endschema %}

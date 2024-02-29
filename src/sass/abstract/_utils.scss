@@ -1,0 +1,184 @@
+@use 'sass:map';
+@use "sass:math";
+
+/*===== Functions =====*/
+// sass_clamp(rem, px, px, rem)
+@function sass_clamp($minFontSize, $minViewWidth, $maxViewWidth, $maxFontSize) {
+
+	$minViewWidth: calc(#{$minViewWidth} / 16);
+	$maxViewWidth: calc(#{$maxViewWidth} / 16);
+
+	$slope: calc((#{$maxFontSize} - #{$minFontSize}) / (#{$maxViewWidth} - #{$minViewWidth}));
+	$yaxis: calc(#{$minFontSize} + (#{$minViewWidth} * #{$slope} * -1));
+
+	$preferredValue: clamp(#{$minFontSize}rem, calc((#{$yaxis} * 1rem) + (#{$slope} * 100) * 1vw), #{$maxFontSize}rem);
+
+	@return $preferredValue;
+}
+
+// produce a function that takes the number of columns and returns the width of the container
+@function container_width($column_number) {
+
+	$columns: 12;
+	$gap: 20px;
+	$column-width: calc((100% - #{($columns - 1) * $gap}) / #{$columns});
+
+	@return calc((#{$column-width} * #{$column_number}) + #{$column_number - 1} * #{$gap});
+}
+
+%container_sizing {
+	width: 90%;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+.section-container {
+	@extend %container_sizing;
+}
+
+.section-container.full {
+	width: 100%;
+	max-width: 100%;
+}
+
+@media(max-width: 768px) {
+	.section-container.full {
+		width: 90%;
+	}
+}
+
+.btn-primary,
+.btn-secondary {
+	border-radius: 100px;
+	border: 1px solid $rt_primary;
+
+	& a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		padding: 7px 15px;
+
+		& svg {
+			width: 20px;
+			height: auto;
+		}
+	}
+}
+
+.btn-primary {
+	background-color: $rt_primary;
+
+	& a {
+		color: $rt_white;
+	}
+}
+
+.btn-secondary {
+	background-color: $rt_white;
+
+	& a {
+		color: $rt_primary;
+	}
+}
+
+button.btn-primary,
+button.btn-secondary {
+	border: 1px solid $rt_primary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 7px 15px;
+
+	& svg {
+		width: 20px;
+		height: auto;
+	}
+}
+
+button.btn-primary {
+	background-color: $rt_primary;
+	color: $rt_white;
+
+	& svg path {
+		stroke: $rt_white;
+	}
+}
+
+button.btn-secondary {
+	background-color: $rt_white;
+	color: $rt_primary;
+
+	& svg path {
+		stroke: $rt_primary;
+	}
+}
+
+html.dark {
+
+	.btn-primary,
+	.btn-secondary {
+		border: 1px solid $rt_white;
+
+		& a {
+
+			& svg path {
+				stroke: $rt_white;
+			}
+		}
+	}
+
+	.btn-primary.shadow {
+		box-shadow: 0px 0px 20px 0 rgba(119, 119, 119, 0.54);	
+		transition: all 150ms ease;
+	}
+	.btn-primary.shadow:hover {
+		-webkit-box-shadow: 0px 0px 20px 8px rgba(119, 119, 119, 0.54);
+		-moz-box-shadow: 0px 0px 20px 8px rgba(119, 119, 119, 0.54);
+		box-shadow: 0px 0px 20px 8px rgba(119, 119, 119, 0.54);
+	}
+
+	.btn-primary {
+		background-color: $rt_white;
+
+		& a {
+			color: $rt_dark;
+		}
+	}
+
+	.btn-secondary {
+		background-color: $rt_dark;
+
+		& a {
+			color: $rt_white;
+		}
+	}
+
+	button.btn-primary,
+	button.btn-secondary {
+		border: 1px solid $rt_white;
+
+		& svg path {
+			stroke: $rt_dark;
+		}
+	}
+
+	button.btn-primary {
+		background-color: $rt_white;
+		color: $rt_dark;
+
+		& svg path {
+			stroke: $rt_dark;
+		}
+	}
+
+	button.btn-secondary {
+		background-color: $rt_dark;
+		color: $rt_white;
+
+		& svg path {
+			stroke: $rt_dark;
+		}
+	}
+}

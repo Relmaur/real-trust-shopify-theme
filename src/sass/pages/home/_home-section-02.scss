@@ -1,0 +1,243 @@
+main {
+    & .divsection-02 {
+        padding-top: 0 !important;
+
+        & .section-container {
+
+            & .upper-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $rt_secondary;
+            }
+
+            & .upper-section .column-1 {
+                padding: 20px 10px 20px 50px;
+                width: container_width(5);
+            }
+
+            & .upper-section .column-1 * {
+                color: $rt_white;
+            }
+
+            & .upper-section .column-1 .accent {
+                color: $rt_gray;
+            }
+
+            & .upper-section .column-1 .separator {
+                margin: 10px 0;
+            }
+
+            & .upper-section .column-1 .separator svg {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+
+            // & .upper-section .column-1 .separator svg path {
+            //     fill: $rt_primary;
+            // }
+            // & .upper-section .column-1 .separator svg line {
+            //     stroke: $rt_gray;
+            // }
+            & .upper-section .column-2 {
+                width: container_width(7);
+            }
+
+            & .upper-section .column-2 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            & .lower-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: -50px 0 0 0;
+
+                & .column-1 {
+                    width: container_width(3);
+                }
+
+                & .column-1 h2 {
+                    margin: 20px 0 0 0;
+                }
+
+                & .column-2.benefits {
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    width: container_width(9);
+                    gap: 20px;
+                }
+
+                & .column-2 div[class|="benefit"] {
+                    width: 100%;
+                    border: 1px solid $rt_primary;
+                    position: relative;
+                    transition: all 500ms ease;
+                    background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
+                    background-size: 400% 400%;
+                    background-repeat: no-repeat;
+                }
+
+                & .column-2 div[class|="benefit"] > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 1;
+                    opacity: 0.5;
+                    mix-blend-mode: screen;
+                }
+
+                & .column-2 div[class|="benefit"]:hover {
+                    background-position: 100% 100%;
+                }
+
+                & .column-2 div[class|="benefit"] .content {
+                    opacity: 0;
+                    transition: all 150ms ease;
+                    position: absolute;
+                    z-index: 10;
+                    width: calc(100% - 40px);
+                    bottom: 20px;
+                    left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    gap: 5px;
+                }
+
+                & .column-2 div[class|="benefit"]:hover .content {
+                    opacity: 1;
+                }
+
+                & .column-2 div[class|="benefit"] .content p {
+                    color: $rt_white;
+                    font-size: sass_clamp(0.7, 16, 20, 0.9);
+                    line-height: 1;
+                }
+
+                & .column-2 div[class|="benefit"]:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1090px) {
+    main {
+        & .divsection-02 {
+
+            & .section-container {
+
+                & .upper-section {
+                    margin: 20px 0 0 0;
+                    align-items: stretch;
+                }
+
+                & .lower-section .column-1 h2 {
+                    margin: 50px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 980px) {
+    main {
+        & .divsection-02 {
+
+            & .section-container {
+
+                & .lower-section {
+                    margin: 0;
+                    flex-direction: column;
+                }
+
+                & .lower-section .column-1 {
+                    width: 100%;
+                }
+
+                & .lower-section .column-1 h2 {
+                    margin: 20px 0;
+                }
+
+                & .lower-section .column-2.benefits {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                }
+
+                & .lower-section .column-2 div[class|="benefit"] {
+                    max-width: 100%;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        & .divsection-02 {
+
+            & .section-container {
+
+                & .upper-section .column-1 {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 530px) {
+    main {
+        & .divsection-02 {
+
+            & .section-container {
+                & .upper-section {
+                    flex-direction: column;
+                }
+
+                & .upper-section div[class|="column"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+html.dark {
+    main {
+        & .divsection-02 {
+            & .section-container {
+                & .upper-section {
+                    background-color: $rt_white;
+                }
+
+                & .upper-section .column-1 * {
+                    color: initial;
+                }
+
+                & .upper-section .column-1 .separator svg path {
+                    fill: $rt_primary;
+                }
+
+                & .upper-section .column-1 .separator svg line {
+                    stroke: $rt_gray;
+                }
+
+                & .lower-section .column-2 div[class|="benefit"] {
+                    border: 1px solid $rt_white;
+                }
+            }
+        }
+    }
+}

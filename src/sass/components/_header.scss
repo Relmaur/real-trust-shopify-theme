@@ -1,0 +1,270 @@
+$blur: 5px;
+
+header {
+    transition: all 150ms ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $rt_white;
+    z-index: 99999;
+    
+    &.scrolled {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    & .section-container {
+        // background-color: lightsalmon;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+
+        & .logo {
+            width: 100%;
+            max-width: 150px;
+
+            & img {
+                width: 100%;
+            }
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        & .menu {
+
+            & nav .theme__toggler {
+                transition: all 150ms ease;
+                display: flex;
+                align-items: center;
+            }
+            & nav .theme__toggler:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+
+
+            & nav .theme__toggler svg {
+                width: 25px;
+                height: auto;
+            }
+
+            & nav .theme__toggler svg #ray_1,
+            & nav .theme__toggler svg #ray_2,
+            & nav .theme__toggler svg #ray_3 {
+                transition: all 200ms ease;
+                fill: rgb(166, 166, 166);
+                opacity: 1;
+            }
+
+
+            & nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+            }
+
+            & nav .menu-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        & .theme__toggler--mobile {
+            display: none;
+        }
+
+        & .menu--mobile,
+        .hamburguer-menu {
+            display: none;
+        }
+
+        // For both menu and menu--mobile
+        & nav .menu-item:not(.cta) svg {
+            opacity: 0;
+            width: 10px;
+            height: auto;
+            transition: all 350ms ease;
+        }
+
+        & nav .menu-item:not(.cta).current-page svg,
+        & nav .menu-item:not(.cta):hover svg {
+            opacity: 1;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    header {
+
+        & .section-container {
+
+            & .menu {
+                display: none;
+            }
+
+            & .menu--mobile {
+                display: block;
+
+                & nav {
+                    position: absolute;
+                    z-index: 999;
+                    top: 100%;
+                    right: -100%;
+                    opacity: 0;
+                    z-index: -1;
+                    width: 50%;
+                    height: auto;
+                    padding: 20px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    backdrop-filter: blur($blur);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    transition: all 150ms ease;
+                }
+
+                & nav div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                & nav div a {
+                    width: 100%;
+                    padding: 10px 0;
+                }
+
+                & nav div:not(:last-child) {
+                    border-bottom: 1px solid $rt_secondary;
+                }
+
+                & nav div:last-child svg {
+                    margin: 0 0 0 5px;
+                }
+            }
+
+            & .theme__toggler--mobile {
+                margin: 0 20px 0 auto;
+                display: block;
+            }
+            & .theme__toggler--mobile svg {
+                width: 25px;
+                height: auto;
+            }
+            & .theme__toggler--mobile svg #ray_1,
+            & .theme__toggler--mobile svg #ray_2,
+            & .theme__toggler--mobile svg #ray_3 {
+                transition: all 200ms ease;
+                fill: rgb(166, 166, 166);
+                opacity: 1;
+            }
+
+            & .menu--mobile.opened {
+                & nav {
+                    right: 0;
+                    opacity: 1;
+                    z-index: 99;
+                }
+            }
+
+            & .hamburguer-menu {
+                display: block;
+
+                & svg #upper-bar,
+                & svg #lower-bar {
+                    // animation: getToInitialPosition 150ms ease forwards;
+                    transition: transform 150ms ease;
+                }
+            }
+
+            & .hamburguer-menu.touched {
+                & svg #upper-bar {
+                    // animation: moveRight 150ms ease forwards;
+                    transform: translateX(13px);
+                }
+
+                & svg #lower-bar {
+                    // animation: moveLeft 150ms ease forwards;
+                    transform: translateX(-13px);
+                }
+            }
+
+            & .hamburguer-menu:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media(max-width: 550px) {
+    header {
+
+        & .section-container {
+
+            & .menu {
+                display: none;
+
+            }
+
+            & .menu--mobile {
+                display: block;
+
+                & nav {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+html.dark {
+    header {
+
+        & .section-container {
+
+            & .menu {
+
+                
+                & nav .theme__toggler svg #ray_1,
+                & nav .theme__toggler svg #ray_2,
+                & nav .theme__toggler svg #ray_3 {
+                    transition: all 200ms ease;
+                    opacity: 0;
+                }
+            }
+
+            & .theme__toggler--mobile svg #ray_1,
+            & .theme__toggler--mobile svg #ray_2,
+            & .theme__toggler--mobile svg #ray_3 {
+                transition: all 200ms ease;
+                opacity: 0;
+            }
+
+            & .menu--mobile {
+
+                & nav {
+                    background-color: rgb(36, 43, 47, 0.7);
+                }
+
+                & nav div:last-child svg path {
+                    stroke: $rt_white;
+                }
+
+                & nav div:not(:last-child) {
+                    border-bottom: 1px solid $rt_gray;
+                }
+            }
+        }
+    }
+}

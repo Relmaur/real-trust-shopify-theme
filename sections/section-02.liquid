@@ -1,0 +1,113 @@
+<div class="divsection-02">
+  <div class="section-container">
+    <div class="upper-section">
+      <div class="column-1">
+        <h2>
+          {{ section.settings.section_02_upper_title }}
+        </h2>
+        <div class="separator">
+          <svg
+            width="209"
+            height="27"
+            viewBox="0 0 209 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="190"
+              y1="13.5"
+              y2="13.5"
+              stroke="#CECECE" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M198 0C198 7.45585 193.075 13.5 187 13.5C193.075 13.5 198 19.5442 198 27C198 19.5442 202.925 13.5 209 13.5C202.925 13.5 198 7.45585 198 0Z"
+              fill="white" />
+          </svg>
+        </div>
+        <div class="text">
+          {{ section.settings.section_02_upper_text }}
+        </div>
+      </div>
+      <div class="column-2">
+        <img src="{{ section.settings.section_02_upper_image |  image_url }}" alt="">
+      </div>
+    </div>
+    <div class="lower-section">
+      <div class="column-1">
+        <h2>
+          {{ section.settings.section_02_lower_title }}
+        </h2>
+      </div>
+      <div class="column-2 benefits">
+        {% for block in section.blocks %}
+          <div class="benefit-{{ forloop.index }}">
+            <div class="content">
+              <div class="icon">
+                <img src="{{ block.settings.benefit_icon |  image_url }}" alt="">
+              </div>
+              <p>{{ block.settings.benefit_text }}</p>
+            </div>
+            <img src="{{ block.settings.benefit_background_image | image_url }}" alt="">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Section 2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_02_upper_title",
+      "label": "Upper title",
+      "default": "NOT your AVERAGE Realtor"
+    },
+    {
+      "type": "richtext",
+      "id": "section_02_upper_text",
+      "label": "Upper text",
+      "default": "<p>Real Trust has an eye for seeing a property's potential, coordinating design, and effectively marketing to get home owners top dollar on their sales.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_02_upper_image",
+      "label": "Upper image"
+    },
+    {
+      "type": "text",
+      "id": "section_02_lower_title",
+      "label": "Lower title",
+      "default": "Why Choose Us?"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "benefit_background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "benefit_icon",
+          "label": "Benefit Icon"
+        },
+        {
+          "type": "text",
+          "id": "benefit_text",
+          "label": "Benefit Text",
+          "default": "Award Winning Design"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

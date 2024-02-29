@@ -1,0 +1,80 @@
+main {
+    & .divsection-06 {
+        padding-top: 0 !important;
+
+        & .section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $rt_dark;
+            
+            & div[class|="column"] {
+                display: flex;
+                justify-content: space-between;
+                width: container-width(6);
+            }
+            & div[class|="column"] * {
+                color: $rt_white;
+            }
+            & .column-1 {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 20px 20px 50px;
+            }
+            & .column-1 p {
+                font-size: sass_clamp(1, 16, 20, 2.8);
+                line-height: 1.2;
+            }
+            & .column-1 .separator {
+                margin: 10px 0;
+            }
+            & .column-1 .separator svg {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+            & .btn-primary {
+                border: 1px solid $rt_white;
+            }
+            & .btn-primary svg path {
+                stroke: $rt_white;
+            }
+        }
+    }
+}
+@media(max-width: 768px) {
+    main {
+        & .section-06 {
+            & .section-container {
+                flex-direction: column;
+                
+                & div[class|="column"] {
+                    width: 100%;
+                }
+                & .column-2 img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+html.dark {
+    main {
+        & .divsection-06 {
+            & .section-container {
+                & .btn-primary {
+                    border: 1px solid $rt_dark;
+                }
+                & .btn-primary a {
+                    color: $rt_dark;
+                }
+                & .btn-primary svg path {
+                    stroke: $rt_dark;
+                }
+            }
+        }
+    }
+}

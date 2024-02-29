@@ -1,0 +1,225 @@
+$star_width: 100px;
+
+main {
+    & .divsection-03 {
+        padding-top: 0 !important;
+
+        & .section-container {
+
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & h2 {
+                margin: 0 0 20px 0;
+            }
+
+            & div[class|="row"] {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            & div[class|="row"]::after {
+                content: "";
+                display: block;
+                width: 3px;
+                z-index: -1;
+                height: 100%;
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                background-color: $rt_gray;
+            }
+
+            & div[class|="row"]:not(.row-3) {
+                margin: 0 0 20px 0;
+            }
+
+            & div[class|="row"] div[class|="column"].text h3 {
+                font-weight: 400;
+                margin: 0 0 10px 0;
+            }
+
+            & div[class|="row"] div[class|="column"].text.right {
+                padding: 20px 20px 20px calc((#{$star_width} / 2) + 20px);
+            }
+
+            & div[class|="row"] div[class|="column"].text.left {
+                padding: 20px calc((#{$star_width} / 2) + 20px) 20px 20px;
+            }
+
+            & div[class|="row"] div[class|="column"].image {
+                width: container-width(8);
+                position: relative;
+            }
+            & div[class|="row"] div[class|="column"].image>img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            & div[class|="row"] div[class|="column"].image .star-icon {
+                position: absolute;
+                top: 50%;
+            }
+
+            & div[class|="row"] div[class|="column"].image.left .star-icon {
+                left: 100%;
+                transform: translate(-50%, -50%);
+            }
+
+            & div[class|="row"] div[class|="column"].image.right .star-icon {
+                right: 100%;
+                transform: translate(50%, -50%);
+            }
+
+            & div[class|="row"] div[class|="column"].image .star-icon svg {
+                width: $star_width;
+                height: auto;
+            }
+
+            & div[class|="row"] div[class|="column"].text {
+                width: container-width(4);
+            }
+
+            & .banner-and-cta {
+                background-color: $rt_secondary;
+                width: container-width(8);
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            & .banner-and-cta p {
+                color: $rt_white;
+            }
+
+            & .banner-and-cta .btn-primary {
+                border: 1px solid $rt_white;
+            }
+
+            & .banner-and-cta .btn-primary a {
+                color: $rt_white;
+            }
+
+            & .banner-and-cta .btn-primary a svg path {
+                stroke: $rt_white;
+            }
+        }
+    }
+}
+
+@media(max-width: 890px) {
+    main {
+        & .divsection-03 {
+
+            & .section-container {
+
+                & div[class|="row"] {
+                    gap: 20px;
+                }
+
+                & div[class|="row"]::after {
+                    display: none;
+                }
+
+                & div[class|="row"]:not(:nth-child(2n)) {
+                    flex-direction: column;
+                }
+
+                & div[class|="row"]:nth-child(2n) {
+                    flex-direction: column-reverse;
+                }
+
+                & div[class|="row"] div[class|="column"].image,
+                & div[class|="row"] div[class|="column"].text {
+                    width: 100%;
+                }
+
+                & div[class|="row"] div[class|="column"].text.right,
+                & div[class|="row"] div[class|="column"].text.left {
+                    // padding: calc((#{$star_width} / 2) + 10px) 20px 20px 20px;
+                    padding: 0;
+                }
+
+                & div[class|="row"] div[class|="column"].image.left .star-icon {
+                    left: 50%;
+                }
+
+                & div[class|="row"] div[class|="column"].image.right .star-icon {
+                    right: 50%;
+                }
+
+                & div[class|="row"] div[class|="column"].image.left .star-icon {
+                    transform: translate(-50%, -50%);
+                }
+
+                & div[class|="row"] div[class|="column"].image.right .star-icon {
+                    transform: translate(50%, -50%);
+                }
+
+                & div[class|="row"] div[class|="column"].image .star-icon svg path {
+                    fill: $rt_white;
+                }
+
+                & .banner-and-cta {
+                    margin: 20px 0 0 0;
+                    width: container-width(12); // Which is the same as 100%
+                }
+            }
+        }
+    }
+
+    html.dark {
+        main {
+            & .divsection-03 {
+                & .section-container {
+                    & div[class|="row"] div[class|="column"].image .star-icon svg path {
+                        fill: $rt_white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.dark {
+    main {
+        & .divsection-03 {
+            & .section-container {
+                & div[class|="row"] div[class|="column"].image .star-icon svg path {
+                    fill: $rt_white;
+                }
+
+                & .banner-and-cta {
+                    background-color: $rt_white;
+                }
+
+                & .banner-and-cta p {
+                    color: $rt_dark;
+                }
+
+                & .banner-and-cta .btn-primary {
+                    border: 1px solid $rt_dark;
+                }
+
+                & .banner-and-cta .btn-primary a {
+                    color: $rt_dark;
+                }
+
+                & .banner-and-cta .btn-primary a svg path {
+                    stroke: $rt_dark;
+                }
+            }
+        }
+    }
+}
+

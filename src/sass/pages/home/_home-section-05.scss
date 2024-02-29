@@ -1,0 +1,82 @@
+main {
+    & .divsection-05 {
+        padding-top: 0 !important;
+
+        & .section-container {
+            & h2 {
+                text-align: center;
+                margin: 0 0 30px 0;
+            }
+
+            & .swiper-testimonials-arrows {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+            }
+            & .swiper-testimonials-arrows svg {
+                width: 25px;
+                height: auto;
+            }
+
+            & .testimonials .swiper-testimonials {
+                overflow-y: visible;
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide {
+                padding: 50px 20px 0 20px;
+            }
+
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            & .testimonials .swiper-testimonials {
+                width: 100%;
+                height: auto;
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial .author-pic img {
+                border-top-left-radius: 50%;
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial .quote .stars {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 5px;
+                margin: 10px 0 0 0;
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial .quote .stars svg {
+                width: 30px;
+                height: auto;
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial .quote {
+                position: relative;
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial .quote .quote-icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+            & .testimonials .swiper-testimonials .swiper-wrapper .swiper-slide .testimonial .quote .quote-author {
+                font-size: sass_clamp(1.5, 24, 36, 2);
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+
+
+html.dark {
+    main {
+        & .divsection-05 {
+            & .section-container {
+                & .swiper-testimonials-arrows svg path {
+                    stroke: $rt_white;
+                }
+            }
+        }
+    }
+}

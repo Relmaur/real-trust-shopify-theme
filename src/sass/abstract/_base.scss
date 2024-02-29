@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/*======
+* Resets
+=======*/
+
+/*===== Custom Reset =====*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    /* 1.2rem => 12px */
+    font-size: 62.5%;
+}
+
+/*===== ...Custom Reset =====*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+// em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+// strong,
+sub,
+// sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+/*
+ol,
+ul {
+    list-style: none;
+}
+*/
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'Lato';
+    overflow-x: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+    opacity: 1;
+
+}
+
+/*========== Custom Base Styling ==========*/
+
+html {
+
+    body {
+        overflow-x: hidden;
+        background-color: #ffffff;
+
+        *.accent {
+            font-style: italic;
+            color: $rt_secondary;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        li,
+        em,
+        sup {
+            color: $rt_primary;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display, serif';
+        }
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: sass_clamp(3.5, 320, 1920, 5);
+        }
+
+        h2 {
+            font-size: sass_clamp(2.3, 320, 1920, 3.5);
+        }
+
+        h3 {
+            font-size: sass_clamp(1.6, 320, 1920, 2.8);
+        }
+
+        h4 {
+            font-size: sass_clamp(1.4, 320, 1920, 2.2);
+        }
+
+        h5 {
+            font-size: sass_clamp(1.2, 320, 1920, 1.8);
+        }
+
+        h6 {
+            font-size: sass_clamp(1.2, 320, 1920, 1.6);
+        }
+
+        p,
+        a,
+        input,
+        textarea,
+        label,
+        li,
+        blockquote,
+        button {
+            font-size: sass_clamp(1, 320, 1920, 1.2);
+            line-height: 1.7;
+            color: $rt_primary;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: $rt_primary;
+            font-weight: 600;
+        }
+
+        button span {
+            font-size: sass_clamp(1.2, 320, 1920, 1.2);
+        }
+
+        blockquote {
+            color: $rt_secondary;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header,
+        footer {
+
+            & p,
+            & a {
+                font-size: sass_clamp(1, 320, 1920, 0.9);
+            }
+        }
+
+        input {
+            border: unset;
+            border-bottom: 1px solid $rt_primary;
+            background-color: transparent;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        & div[class|="divsection"]:first-child {
+            padding: calc(90px + 4%) 0 3.5% 0;
+        }
+
+        & div[class|="divsection"] {
+            scroll-margin-top: 100px;
+            padding: 3% 0;
+        }
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+}
+
+@media(max-width: 480px) {
+    html {
+
+        body {
+            & div[class|="divsection"]:first-child {
+            padding: 7% 0 20px 0;
+        }
+
+        & div[class|="divsection"] {
+            scroll-margin-top: 100px;
+            padding: 30px 0;
+        }
+        }
+    }
+}
+
+/*
+   ============
+      Dark Mode
+   ============
+*/
+
+html.dark {
+    body {
+        background-color: $rt_dark;
+
+        *.accent {
+            color: $rt_gray;
+        }
+
+        header {
+            background-color: $rt_dark;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        li,
+        em,
+        sup,
+        blockquote,
+        input,
+        textarea,
+        label,
+        div {
+            color: $rt_white;
+            border-color: $rt_white;
+        }
+
+        svg path {
+            fill: $rt_white;
+        }
+
+        div.logo svg #real path,
+        #house-icon #light path {
+            fill: $rt_gray !important;
+        }
+
+        div.logo svg #trust path,
+        div.logo svg #house-icon #dark path {
+            fill: $rt_white !important;
+        }
+    }
+}

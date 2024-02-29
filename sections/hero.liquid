@@ -1,0 +1,125 @@
+<div class="divsection-01 hero">
+  <div class="section-container full">
+    <div class="column-1">
+      <div class="progress-bar"></div>
+      <div class="star-ornament">
+        <svg
+          width="92"
+          height="112"
+          viewBox="0 0 92 112"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+            fill="#363B3E" />
+        </svg>
+      </div>
+      <div class="swiper swiper-hero">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <img src="{{  block.settings.image | image_url }}" alt="{{ block.settings.alt_text }}">
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="column-2">
+      <h1>
+        {{ section.settings.title | escape }}
+      </h1>
+      <div class="form">
+        <form action="">
+          <input type="text" placeholder="Your email">
+          <button class="btn-primary" type="submit">
+            Send it!
+            <svg
+              width="15"
+              height="10"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 5L1 5M14 5L10 9M14 5L10 1"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="swiper-hero-arrows">
+        <div class="prev">
+          <svg
+            width="16"
+            height="14"
+            viewBox="0 0 16 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 7L7 1M1 7L7 13M1 7L15 7"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="next">
+          <svg
+            width="16"
+            height="14"
+            viewBox="0 0 16 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 7L9 13M15 7L9 1M15 7L1 7"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Consultation, Design, & Marketing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "A beautiful livingroom"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

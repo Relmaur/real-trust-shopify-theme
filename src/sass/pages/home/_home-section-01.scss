@@ -1,0 +1,168 @@
+main {
+    // height: 2000px;
+    & .divsection-01 {
+        padding-bottom: 0 !important;
+        
+        & .section-container {
+            display: flex;
+            justify-content: stretch;
+            align-items: stretch;
+            gap: 20px;
+
+            & div[class|="column"] {
+                width: 50%;
+            }
+
+            & .column-1 {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & .column-1 .progress-bar {
+                
+                $height: 3px;
+
+                position: absolute;
+                top: calc(-#{$height} / 2);
+                left: 0;
+                z-index: 19;
+                width: 100%;
+                height: $height;
+                background-color: $rt_gray;
+            }
+            & .column-1 .star-ornament {
+                display: none;
+            }
+
+            & .column-1 .swiper {
+                width: 100%;
+                height: auto;
+            }
+            & .column-1 .swiper .swiper-slide {
+                // aspect-ratio: 1.618;
+            }
+            & .column-1 .swiper .swiper-slide img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+
+            & .column-2 {
+                position: relative;
+                max-width: 600px;
+                padding: 0 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            & .column-2 .form form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            & .column-2 .form form button {
+                margin: 0 0 0 auto;
+            }
+
+            & .column-2 .form form input {
+                width: 100%;
+            }
+
+            & .column-2 .swiper-hero-arrows {
+                position: absolute;
+                bottom: 20px;
+                left: 0px;
+                display: flex;
+                gap: 30px;
+                z-index: 1;
+                // transform: translateX(-50%);
+            }
+
+            & .column-2 .swiper-hero-arrows>div:hover {
+                cursor: pointer;
+            }
+
+            & .column-2 .swiper-hero-arrows .prev svg,
+            & .column-2 .swiper-hero-arrows .next svg {
+                width: 25px;
+                height: auto;
+            }
+
+            & .column-2 .swiper-hero-arrows .prev svg path,
+            & .column-2 .swiper-hero-arrows .next svg path {
+                stroke: $rt_primary;
+            }
+        }
+    }
+}
+
+@media(max-width: 980px) {
+    main {
+        & .divsection-01 {
+            & .section-container {
+                & .column-2 {
+                    padding: 0 10px 20px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        & .divsection-01 {
+            & .section-container {
+                width: 90%;
+                flex-direction: column-reverse;
+
+                & div[class|="column"] {
+                    width: 100%;
+                }
+                & .column-1 {
+                    position: relative;
+                }
+                & .column-1 .star-ornament {
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    top: -120px;
+                    opacity: 0.1;
+                }    
+                & .column-1 .star-ornament svg {
+                    width: 150px;
+                    height: auto;
+                }
+                
+                & .column-2 .swiper-hero-arrows {
+                    position: relative;
+                    bottom: unset;
+                    left: 0;
+                    gap: 30px;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+html.dark {
+    main {
+        & .divsection-01 {
+            & .section-container {
+
+                & .column-1 .progress-bar {
+                    background-color: $rt_white;
+                }
+
+                & .column-2 .swiper-hero-arrows .prev svg path,
+                & .column-2 .swiper-hero-arrows .next svg path {
+                    stroke: $rt_white;
+                }
+            }
+        }
+    }
+}

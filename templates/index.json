@@ -1,0 +1,49 @@
+{
+    "wrapper": "section",
+    "sections": {
+        "hero": {
+            "type": "hero",
+            "blocks": {
+                
+            }
+        },
+        "section-02": {
+            "type": "section-02",
+            "blocks": {
+                
+            }
+        },
+        "section-03": {
+            "type": "section-03",
+            "blocks": {
+                
+            }
+        },
+        "section-04": {
+            "type": "section-04",
+            "blocks": {
+                
+            }
+        },
+        "section-05": {
+            "type": "section-05",
+            "blocks": {
+                
+            }
+        },
+        "section-06": {
+            "type": "section-06",
+            "blocks": {
+                
+            }
+        }
+    },
+    "order": [
+        "hero",
+        "section-02",
+        "section-03",
+        "section-04",
+        "section-05",
+        "section-06"
+    ]
+}

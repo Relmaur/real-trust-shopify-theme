@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use "sass:math";
+
+/*===== Functions =====*/
+// sass_clamp(rem, px, px, rem)
+@function sass_clamp($minFontSize, $minViewWidth, $maxViewWidth, $maxFontSize) {
+
+    $minViewWidth: calc(#{$minViewWidth} / 16);
+    $maxViewWidth: calc(#{$maxViewWidth} / 16);
+
+    $slope: calc((#{$maxFontSize} - #{$minFontSize}) / (#{$maxViewWidth} - #{$minViewWidth}));
+    $yaxis: calc(#{$minFontSize} + (#{$minViewWidth} * #{$slope} * -1));
+
+    $preferredValue: clamp(#{$minFontSize}rem, calc((#{$yaxis} * 1rem) + (#{$slope} * 100) * 1vw), #{$maxFontSize}rem);
+
+    @return $preferredValue;
+}
+
+/*
+  ==========
+  Colors 
+  ==========
+*/
+
+$colors: (
+    "rt": ("primary": #000000,
+        "secondary": #363B3E,
+        "white": #ffffff,
+        "gray": #D9D9D9,
+        "dark": #242B2F,
+    ),
+);
+
+$rt_primary: map.get(map.get($colors, 'rt'), 'primary');
+$rt_secondary: map.get(map.get($colors, 'rt'), 'secondary');
+$rt_white: map.get(map.get($colors, 'rt'), 'white');
+$rt_gray: map.get(map.get($colors, 'rt'), 'gray');
+$rt_dark: map.get(map.get($colors, 'rt'), 'dark');
+
+// Layout
+$max-width: 1312px;
+
