@@ -1,7 +1,7 @@
 <div class="divsection-06">
   <div class="section-container">
     <div class="column-1">
-      <p>Learn more about our listing process, as well as our additional staging and design work.</p>
+      <p>{{ section.settings.section_06_title }}</p>
       <div class="separator">
         <svg
           width="209"
@@ -17,8 +17,8 @@
         </svg>
       </div>
       <div class="btn-primary">
-        <a href=""
-          >Contact Us
+        <a href="{{ section.settings.section_06_cta_url }}"></a>
+          {{- section.settings.section_06_cta_text }}
           <svg
             width="15"
             height="10"
@@ -33,7 +33,44 @@
       </div>
     </div>
     <div class="column-2">
-      <img src="./assets//img/rt-image-16.webp" alt="">
+      <img src="{{ section.settings.section_06_image |  image_url: width: '1000px' }}" alt="">
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Section 6",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_06_title",
+      "label": "Title",
+      "default": "Learn more about our listing process, as well as our additional staging and design work."
+    },
+    {
+      "type": "text",
+      "id": "section_06_cta_text",
+      "label": "Button Text",
+      "default": "Contact Us"
+    },
+    {
+      "type": "url",
+      "id": "section_06_cta_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_06_image",
+      "label": "Image"
+    }
+  ],
+
+  "presets": [
+    {
+      "category": "Section",
+      "name": "Section 6"
+    }
+  ]
+}
+{% endschema %}
