@@ -61,50 +61,6 @@
               <a href="{{ link.url }}">{{ link.title }}</a>
             </div>
           {% endfor %}
-          {% comment %}
-            <div class="menu-item">
-              <svg
-                width="92"
-                height="112"
-                viewBox="0 0 92 112"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                    fill="#363B3E" />
-              </svg>
-              <a href="#">Services</a>
-            </div>
-            <div class="menu-item">
-              <svg
-                width="92"
-                height="112"
-                viewBox="0 0 92 112"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                    fill="#363B3E" />
-              </svg>
-              <a href="#">About Projects</a>
-            </div>
-            <div class="menu-item">
-              <svg
-                width="92"
-                height="112"
-                viewBox="0 0 92 112"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                    fill="#363B3E" />
-              </svg>
-              <a href="#">Testimonials</a>
-            </div>
-          {% endcomment %}
         {% endif %}
 
         <div class="btn-secondary">
@@ -144,62 +100,26 @@
     </div>
     <div class="menu--mobile" :class="is_menu_opened ? 'opened': ''">
       <nav class="navigation">
-        <div class="menu-item current-page">
-          <svg
-            width="92"
-            height="112"
-            viewBox="0 0 92 112"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                fill="#363B3E" />
-          </svg>
-          <a href="#">Home</a>
-        </div>
-        <div class="menu-item">
-          <svg
-            width="92"
-            height="112"
-            viewBox="0 0 92 112"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                fill="#363B3E" />
-          </svg>
-          <a href="#">Services</a>
-        </div>
-        <div class="menu-item">
-          <svg
-            width="92"
-            height="112"
-            viewBox="0 0 92 112"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                fill="#363B3E" />
-          </svg>
-          <a href="#">About Projects</a>
-        </div>
-        <div class="menu-item">
-          <svg
-            width="92"
-            height="112"
-            viewBox="0 0 92 112"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                fill="#363B3E" />
-          </svg>
-          <a href="#">Testimonials</a>
-        </div>
+
+        {% if linklists.rt-menu %}
+          {% for link in linklists.rt-menu.links %}
+            <div class="menu-item {% if link.url == request.path %} current-page {% endif %} ">
+              <svg
+                width="92"
+                height="112"
+                viewBox="0 0 92 112"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+                    fill="#363B3E" />
+              </svg>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </div>
+          {% endfor %}
+        {% endif %}
+
         <div class="menu-item cta">
           <a href="">
             Contact Us
