@@ -133,8 +133,8 @@
           </div>
         </div>
         <img
-          src="{{ section.settings.section_04_project_01_background_image }}"
-          alt="{{ section.settings.section_04_project_01_image_alt }}"
+          src="{{ section.settings.section_04_project_01_background_image |  image_url: width: 800, height: 800}}"
+          alt="{{ section.settings.section_04_project_01_image_alt | image_url: width: 800, height: 800}}"
         >
       </div>
       <div class="project-2 short">
