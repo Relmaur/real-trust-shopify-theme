@@ -170,12 +170,32 @@
             "section_05_testimonial_quote": "Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus. Non gravida condimentum lorem dolor amet.",
             "section_05_testimonial_author_rating": "5"
           }
+        },
+        "testimonial_JJiRcd": {
+          "type": "testimonial",
+          "settings": {
+            "section_05_testimonial_author": "John S.",
+            "section_05_testimonial_author_image": "shopify:\/\/shop_images\/rt-image-testimonial-author.png",
+            "section_05_testimonial_quote": "Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus. Non gravida condimentum lorem dolor amet.",
+            "section_05_testimonial_author_rating": "5"
+          }
+        },
+        "testimonial_QaGED7": {
+          "type": "testimonial",
+          "settings": {
+            "section_05_testimonial_author": "John S.",
+            "section_05_testimonial_author_image": "shopify:\/\/shop_images\/rt-image-testimonial-author.png",
+            "section_05_testimonial_quote": "Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus. Non gravida condimentum lorem dolor amet.",
+            "section_05_testimonial_author_rating": "5"
+          }
         }
       },
       "block_order": [
         "testimonial_mjEidJ",
         "testimonial_HP6ArA",
-        "testimonial_ARbxXB"
+        "testimonial_ARbxXB",
+        "testimonial_JJiRcd",
+        "testimonial_QaGED7"
       ],
       "settings": {
         "section_05_title": "Don't take it from us"
