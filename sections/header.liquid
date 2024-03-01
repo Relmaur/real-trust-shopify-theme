@@ -37,16 +37,14 @@
   <div class="section-container">
     <div class="logo">
       <a href="/">
-        <svg width="128" height="41" viewBox="0 0 128 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {% render 'logo' %}
-        </svg>
+        {% render 'logo' %}
+        </a>
         <p>{{ request.path }}</p>
-      </a>
     </div>
     <div class="menu">
       <nav class="navigation">
-        {% if linklists.rt-menu %}
-          {% for link in linklists.rt-menu.links %}
+        {% if linklists['rt-menu'] %}
+          {% for link in linklists['rt-menu'].links %}
             <div class="menu-item {% if link.url == request.path %} current-page {% endif %} ">
               <svg
                 width="92"
@@ -101,9 +99,8 @@
     </div>
     <div class="menu--mobile" :class="is_menu_opened ? 'opened': ''">
       <nav class="navigation">
-
-        {% if linklists.rt-menu %}
-          {% for link in linklists.rt-menu.links %}
+        {% if linklists['rt-menu'] %}
+          {% for link in linklists['rt-menu'].links %}
             <div class="menu-item {% if link.url == request.path %} current-page {% endif %} ">
               <svg
                 width="92"
