@@ -10,10 +10,18 @@
             "image": "shopify:\/\/shop_images\/rt-image-1.webp",
             "alt_text": "A beautiful livingroom"
           }
+        },
+        "slide_GULEgy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rt-image-12.webp",
+            "alt_text": "A beautiful livingroom"
+          }
         }
       },
       "block_order": [
-        "slide_eXrDK4"
+        "slide_eXrDK4",
+        "slide_GULEgy"
       ],
       "settings": {
         "title": "Consultation, Design, & Marketing",
