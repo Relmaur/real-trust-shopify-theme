@@ -1,31 +1,103 @@
 {
-    "wrapper": "section",
-    "sections": {
-        "hero": {
-            "type": "hero"
-        },
-        "section-02": {
-            "type": "section-02"
-        },
-        "section-03": {
-            "type": "section-03"
-        },
-        "section-04": {
-            "type": "section-04"
-        },
-        "section-05": {
-            "type": "section-05"
-        },
-        "section-06": {
-            "type": "section-06"
+  "wrapper": "section",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "slide_eXrDK4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rt-image-1.webp",
+            "alt_text": "A beautiful livingroom"
+          }
         }
+      },
+      "block_order": [
+        "slide_eXrDK4"
+      ],
+      "settings": {
+        "title": "Consultation, Design, & Marketing",
+        "hero_form_placeholder": "Email",
+        "hero_form_button_text": "Send it!"
+      }
     },
-    "order": [
-        "hero",
-        "section-02",
-        "section-03",
-        "section-04",
-        "section-05",
-        "section-06"
-    ]
+    "section-02": {
+      "type": "section-02",
+      "settings": {
+        "section_02_upper_title": "NOT your AVERAGE Realtor",
+        "section_02_upper_text": "<p>Real Trust has an eye for seeing a property's potential, coordinating design, and effectively marketing to get home owners top dollar on their sales.<\/p>",
+        "section_02_lower_title": "Why Choose Us?"
+      }
+    },
+    "section-03": {
+      "type": "section-03",
+      "settings": {
+        "section_03_row1_title": "Potential ROI",
+        "section_03_row1_text": "<p>Whether you are looking to buy a fixer-upper or renovate your current home for sale, we will walk you through potential returns for projects.<\/p>",
+        "section_03_row1_image_alt": "",
+        "section_03_row2_title": "Design",
+        "section_03_row2_text": "<p>Our background in interior design makes the perfect guide through your design optionsand coordinating contractors to complete the home upgrade..<\/p>",
+        "section_03_row2_image_alt": "",
+        "section_03_row3_title": "Marketing",
+        "section_03_row3_text": "<p>Staging consultation, professional photos and a sophisticated digital marketing planaccompany every listing to reach today's buyers.<\/p>",
+        "section_03_row3_image_alt": "",
+        "section_03_banner_text": "<p>Fifteen years of <span>experience<\/span> in real estate, excellent customer service and a commitment to work hard, listen and follow through. We provide quality service to build relationships with clients and, more importantly, maintain those relationships by communicating effectively.<\/p>",
+        "section_03_banner_cta_text": "Contact Us",
+        "section_03_banner_cta_url": "#"
+      }
+    },
+    "section-04": {
+      "type": "section-04",
+      "settings": {
+        "section_04_project_01_image_alt": "",
+        "section_04_project_01_title": "",
+        "section_04_project_01_location": "",
+        "section_04_project_01_area": "",
+        "section_04_project_01_time": "",
+        "section_04_project_02_image_alt": "",
+        "section_04_project_02_title": "",
+        "section_04_project_02_location": "",
+        "section_04_project_02_area": "",
+        "section_04_project_02_time": "",
+        "section_04_project_03_image_alt": "",
+        "section_04_project_03_title": "",
+        "section_04_project_03_location": "",
+        "section_04_project_03_area": "",
+        "section_04_project_03_time": "",
+        "section_04_project_04_image_alt": "",
+        "section_04_project_04_title": "",
+        "section_04_project_04_location": "",
+        "section_04_project_04_area": "",
+        "section_04_project_04_time": "",
+        "section_04_project_05_image_alt": "",
+        "section_04_project_05_title": "",
+        "section_04_project_05_location": "",
+        "section_04_project_05_area": "",
+        "section_04_project_05_time": "",
+        "section_04_project_06_image_alt": "",
+        "section_04_project_06_title": "",
+        "section_04_project_06_area": "",
+        "section_04_project_06_location": "",
+        "section_04_project_06_time": ""
+      }
+    },
+    "section-05": {
+      "type": "section-05",
+      "settings": {
+      }
+    },
+    "section-06": {
+      "type": "section-06",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "section-02",
+    "section-03",
+    "section-04",
+    "section-05",
+    "section-06"
+  ]
 }
