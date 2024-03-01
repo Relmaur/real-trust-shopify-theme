@@ -1,6 +1,7 @@
 <div class="divsection-05">
   <div class="section-container">
-    <h2>Don't take it from us</h2>
+    <h2>{{ section.settings.section_05_title }}</h2>
+
     <div class="swiper-testimonials-arrows">
       <div class="prev">
         <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,391 +16,177 @@
         </svg>
       </div>
     </div>
+
     <div class="testimonials">
       <div class="swiper swiper-testimonials">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="author-pic">
-                <img src="./assets/img/rt-image-testimonial-author.png" alt="">
-              </div>
-              <div class="quote">
-                <div class="quote-icon">
-                  <svg
-                    width="60"
-                    height="50"
-                    viewBox="0 0 60 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="testimonial">
+                <div class="author-pic">
+                  <img
+                    src="{{ block.settings.section_05_testimonial_author_image | image_url }}"
+                    alt="Testimonial Author"
                   >
-                    <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M21.6727 0.448592C8.80074 8.71123 1.65022 18.327 0.219437 29.3012C-2.00794 46.3817 13.2743 54.7418 21.018 47.2309C28.7617 39.7183 24.1206 30.1845 18.5137 27.5772C12.9068 24.9717 9.47767 25.8789 10.076 22.3951C10.6743 18.9131 18.6504 9.25626 25.6591 4.75931C25.9074 4.54822 26.0659 4.25038 26.1021 3.92654C26.1383 3.6027 26.0496 3.27725 25.8539 3.01657L24.1206 0.762969C23.3684 -0.214332 22.6471 -0.176744 21.6727 0.446883M55.5637 0.448592C42.6918 8.71123 35.5395 18.3288 34.1105 29.3012C31.8831 46.3817 47.1653 54.7418 54.909 47.2309C62.6527 39.7183 58.0116 30.1845 52.403 27.5772C46.7961 24.9717 43.367 25.8789 43.9653 22.3951C44.5636 18.9131 52.5415 9.25626 59.5501 4.75931C59.7982 4.54798 59.9563 4.25003 59.9922 3.9262C60.0281 3.60237 59.9391 3.27705 59.7433 3.01657L58.0099 0.762969C57.2578 -0.214332 56.5364 -0.176744 55.5637 0.446883"
-                        fill="black" />
-                  </svg>
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus
-                  sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus.
-                  Non gravida condimentum lorem dolor amet.
-                </p>
-                <p class="quote-author">Monica Geller</p>
-                <div class="stars">
-                  <div class="star-icon">
+                <div class="quote">
+                  <div class="quote-icon">
                     <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
+                      width="60"
+                      height="50"
+                      viewBox="0 0 60 50"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
+                      <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.6727 0.448592C8.80074 8.71123 1.65022 18.327 0.219437 29.3012C-2.00794 46.3817 13.2743 54.7418 21.018 47.2309C28.7617 39.7183 24.1206 30.1845 18.5137 27.5772C12.9068 24.9717 9.47767 25.8789 10.076 22.3951C10.6743 18.9131 18.6504 9.25626 25.6591 4.75931C25.9074 4.54822 26.0659 4.25038 26.1021 3.92654C26.1383 3.6027 26.0496 3.27725 25.8539 3.01657L24.1206 0.762969C23.3684 -0.214332 22.6471 -0.176744 21.6727 0.446883M55.5637 0.448592C42.6918 8.71123 35.5395 18.3288 34.1105 29.3012C31.8831 46.3817 47.1653 54.7418 54.909 47.2309C62.6527 39.7183 58.0116 30.1845 52.403 27.5772C46.7961 24.9717 43.367 25.8789 43.9653 22.3951C44.5636 18.9131 52.5415 9.25626 59.5501 4.75931C59.7982 4.54798 59.9563 4.25003 59.9922 3.9262C60.0281 3.60237 59.9391 3.27705 59.7433 3.01657L58.0099 0.762969C57.2578 -0.214332 56.5364 -0.176744 55.5637 0.446883"
+                          fill="black" />
                     </svg>
                   </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
+                  <p>
+                    {{ block.settings.section_05_testimonial_quote }}
+                  </p>
+                  <p class="quote-author">{{ block.settings.section_05_testimonial_author }}</p>
+                  <div class="stars">
+                    <div class="star-icon">
+                      <svg
+                        width="92"
+                        height="112"
+                        viewBox="0 0 92 112"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+                            fill="#363B3E" />
+                      </svg>
+                    </div>
+                    <div class="star-icon">
+                      <svg
+                        width="92"
+                        height="112"
+                        viewBox="0 0 92 112"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+                            fill="#363B3E" />
+                      </svg>
+                    </div>
+                    <div class="star-icon">
+                      <svg
+                        width="92"
+                        height="112"
+                        viewBox="0 0 92 112"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+                            fill="#363B3E" />
+                      </svg>
+                    </div>
+                    <div class="star-icon">
+                      <svg
+                        width="92"
+                        height="112"
+                        viewBox="0 0 92 112"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+                            fill="#363B3E" />
+                      </svg>
+                    </div>
+                    <div class="star-icon">
+                      <svg
+                        width="92"
+                        height="112"
+                        viewBox="0 0 92 112"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
+                            fill="#363B3E" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="author-pic">
-                <img src="./assets/img/rt-image-testimonial-author.png" alt="">
-              </div>
-              <div class="quote">
-                <div class="quote-icon">
-                  <svg
-                    width="60"
-                    height="50"
-                    viewBox="0 0 60 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M21.6727 0.448592C8.80074 8.71123 1.65022 18.327 0.219437 29.3012C-2.00794 46.3817 13.2743 54.7418 21.018 47.2309C28.7617 39.7183 24.1206 30.1845 18.5137 27.5772C12.9068 24.9717 9.47767 25.8789 10.076 22.3951C10.6743 18.9131 18.6504 9.25626 25.6591 4.75931C25.9074 4.54822 26.0659 4.25038 26.1021 3.92654C26.1383 3.6027 26.0496 3.27725 25.8539 3.01657L24.1206 0.762969C23.3684 -0.214332 22.6471 -0.176744 21.6727 0.446883M55.5637 0.448592C42.6918 8.71123 35.5395 18.3288 34.1105 29.3012C31.8831 46.3817 47.1653 54.7418 54.909 47.2309C62.6527 39.7183 58.0116 30.1845 52.403 27.5772C46.7961 24.9717 43.367 25.8789 43.9653 22.3951C44.5636 18.9131 52.5415 9.25626 59.5501 4.75931C59.7982 4.54798 59.9563 4.25003 59.9922 3.9262C60.0281 3.60237 59.9391 3.27705 59.7433 3.01657L58.0099 0.762969C57.2578 -0.214332 56.5364 -0.176744 55.5637 0.446883"
-                        fill="black" />
-                  </svg>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus
-                  sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus.
-                  Non gravida condimentum lorem dolor amet.
-                </p>
-                <p class="quote-author">Monica Geller</p>
-                <div class="stars">
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="author-pic">
-                <img src="./assets/img/rt-image-testimonial-author.png" alt="">
-              </div>
-              <div class="quote">
-                <div class="quote-icon">
-                  <svg
-                    width="60"
-                    height="50"
-                    viewBox="0 0 60 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M21.6727 0.448592C8.80074 8.71123 1.65022 18.327 0.219437 29.3012C-2.00794 46.3817 13.2743 54.7418 21.018 47.2309C28.7617 39.7183 24.1206 30.1845 18.5137 27.5772C12.9068 24.9717 9.47767 25.8789 10.076 22.3951C10.6743 18.9131 18.6504 9.25626 25.6591 4.75931C25.9074 4.54822 26.0659 4.25038 26.1021 3.92654C26.1383 3.6027 26.0496 3.27725 25.8539 3.01657L24.1206 0.762969C23.3684 -0.214332 22.6471 -0.176744 21.6727 0.446883M55.5637 0.448592C42.6918 8.71123 35.5395 18.3288 34.1105 29.3012C31.8831 46.3817 47.1653 54.7418 54.909 47.2309C62.6527 39.7183 58.0116 30.1845 52.403 27.5772C46.7961 24.9717 43.367 25.8789 43.9653 22.3951C44.5636 18.9131 52.5415 9.25626 59.5501 4.75931C59.7982 4.54798 59.9563 4.25003 59.9922 3.9262C60.0281 3.60237 59.9391 3.27705 59.7433 3.01657L58.0099 0.762969C57.2578 -0.214332 56.5364 -0.176744 55.5637 0.446883"
-                        fill="black" />
-                  </svg>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus
-                  sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus.
-                  Non gravida condimentum lorem dolor amet.
-                </p>
-                <p class="quote-author">Monica Geller</p>
-                <div class="stars">
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="author-pic">
-                <img src="./assets/img/rt-image-testimonial-author.png" alt="">
-              </div>
-              <div class="quote">
-                <div class="quote-icon">
-                  <svg
-                    width="60"
-                    height="50"
-                    viewBox="0 0 60 50"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
-                        d="M21.6727 0.448592C8.80074 8.71123 1.65022 18.327 0.219437 29.3012C-2.00794 46.3817 13.2743 54.7418 21.018 47.2309C28.7617 39.7183 24.1206 30.1845 18.5137 27.5772C12.9068 24.9717 9.47767 25.8789 10.076 22.3951C10.6743 18.9131 18.6504 9.25626 25.6591 4.75931C25.9074 4.54822 26.0659 4.25038 26.1021 3.92654C26.1383 3.6027 26.0496 3.27725 25.8539 3.01657L24.1206 0.762969C23.3684 -0.214332 22.6471 -0.176744 21.6727 0.446883M55.5637 0.448592C42.6918 8.71123 35.5395 18.3288 34.1105 29.3012C31.8831 46.3817 47.1653 54.7418 54.909 47.2309C62.6527 39.7183 58.0116 30.1845 52.403 27.5772C46.7961 24.9717 43.367 25.8789 43.9653 22.3951C44.5636 18.9131 52.5415 9.25626 59.5501 4.75931C59.7982 4.54798 59.9563 4.25003 59.9922 3.9262C60.0281 3.60237 59.9391 3.27705 59.7433 3.01657L58.0099 0.762969C57.2578 -0.214332 56.5364 -0.176744 55.5637 0.446883"
-                        fill="black" />
-                  </svg>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus
-                  sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus.
-                  Non gravida condimentum lorem dolor amet.
-                </p>
-                <p class="quote-author">Monica Geller</p>
-                <div class="stars">
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                  <div class="star-icon">
-                    <svg
-                      width="92"
-                      height="112"
-                      viewBox="0 0 92 112"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M46 0C46 30.928 25.4051 56 0 56C25.4051 56 46 81.072 46 112C46 81.072 66.5949 56 92 56C66.5949 56 46 30.928 46 0Z"
-                          fill="#363B3E" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Section 3 - Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_05_title",
+      "label": "Section Title",
+      "default": "Don't take it from us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Tesimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_05_testimonial_author",
+          "label": "Testimonial Author",
+          "default": "John S."
+        },
+        {
+          "type": "image_picker",
+          "id": "section_05_testimonial_author_image",
+          "label": "Testimonial Author Image"
+        },
+        {
+          "type": "text",
+          "id": "section_05_testimonial_quote",
+          "label": "Testimonial Quote",
+          "default": "Lorem ipsum dolor sit amet consectetur. Tellus tempus ultrices et posuere velit purus risus sollicitudin. Diam tempor habitasse hendrerit quam pellentesque mauris. Quis gravida in nunc senectus. Non gravida condimentum lorem dolor amet."
+        },
+        {
+          "type": "select",
+          "id": "section_05_testimonial_author_rating",
+          "label": "Testimonial Author Rating",
+          "options": [
+            {
+              "value": "1",
+              "label": "1 Star"
+            },
+            {
+              "value": "2",
+              "label": "2 Stars"
+            },
+            {
+              "value": "3",
+              "label": "3 Star"
+            },
+            {
+              "value": "4",
+              "label": "4 Star"
+            },
+            {
+              "value": "5",
+              "label": "5 Star"
+            }
+          ],
+          "default": "5"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
