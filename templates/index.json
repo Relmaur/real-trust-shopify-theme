@@ -36,6 +36,7 @@
           "type": "benefit",
           "settings": {
             "benefit_background_image": "shopify:\/\/shop_images\/rt-image-3.webp",
+            "benefit_icon": "shopify:\/\/shop_images\/rt-icon-ribbon.svg",
             "benefit_text": "Award Winning Design"
           }
         },
@@ -43,6 +44,7 @@
           "type": "benefit",
           "settings": {
             "benefit_background_image": "shopify:\/\/shop_images\/rt-image-4.webp",
+            "benefit_icon": "shopify:\/\/shop_images\/rt-icon-ribbon.svg",
             "benefit_text": "Award Winning Design"
           }
         },
@@ -50,6 +52,7 @@
           "type": "benefit",
           "settings": {
             "benefit_background_image": "shopify:\/\/shop_images\/rt-image-5.webp",
+            "benefit_icon": "shopify:\/\/shop_images\/rt-icon-ribbon.svg",
             "benefit_text": "Award Winning Design"
           }
         },
@@ -57,6 +60,7 @@
           "type": "benefit",
           "settings": {
             "benefit_background_image": "shopify:\/\/shop_images\/rt-image-6.webp",
+            "benefit_icon": "shopify:\/\/shop_images\/rt-icon-ribbon.svg",
             "benefit_text": "Award Winning Design"
           }
         }
