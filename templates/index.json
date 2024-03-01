@@ -31,6 +31,42 @@
     },
     "section-02": {
       "type": "section-02",
+      "blocks": {
+        "benefit_UkweUi": {
+          "type": "benefit",
+          "settings": {
+            "benefit_background_image": "shopify:\/\/shop_images\/rt-image-3.webp",
+            "benefit_text": "Award Winning Design"
+          }
+        },
+        "benefit_4a3tBg": {
+          "type": "benefit",
+          "settings": {
+            "benefit_background_image": "shopify:\/\/shop_images\/rt-image-4.webp",
+            "benefit_text": "Award Winning Design"
+          }
+        },
+        "benefit_3nzTHg": {
+          "type": "benefit",
+          "settings": {
+            "benefit_background_image": "shopify:\/\/shop_images\/rt-image-5.webp",
+            "benefit_text": "Award Winning Design"
+          }
+        },
+        "benefit_brTBzy": {
+          "type": "benefit",
+          "settings": {
+            "benefit_background_image": "shopify:\/\/shop_images\/rt-image-6.webp",
+            "benefit_text": "Award Winning Design"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_UkweUi",
+        "benefit_4a3tBg",
+        "benefit_3nzTHg",
+        "benefit_brTBzy"
+      ],
       "settings": {
         "section_02_upper_title": "NOT your AVERAGE Realtor",
         "section_02_upper_text": "<p>Real Trust has an eye for seeing a property's potential, coordinating design, and effectively marketing to get home owners top dollar on their sales.<\/p>",
