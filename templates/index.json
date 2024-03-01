@@ -2,40 +2,22 @@
     "wrapper": "section",
     "sections": {
         "hero": {
-            "type": "hero",
-            "blocks": {
-                
-            }
+            "type": "hero"
         },
         "section-02": {
-            "type": "section-02",
-            "blocks": {
-                
-            }
+            "type": "section-02"
         },
         "section-03": {
-            "type": "section-03",
-            "blocks": {
-                
-            }
+            "type": "section-03"
         },
         "section-04": {
-            "type": "section-04",
-            "blocks": {
-                
-            }
+            "type": "section-04"
         },
         "section-05": {
-            "type": "section-05",
-            "blocks": {
-                
-            }
+            "type": "section-05"
         },
         "section-06": {
-            "type": "section-06",
-            "blocks": {
-                
-            }
+            "type": "section-06"
         }
     },
     "order": [
