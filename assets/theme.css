@@ -730,6 +730,7 @@ footer .notices .section-container .links {
   }
 }
 main .divsection-01 {
+  padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 main .divsection-01 .section-container {
