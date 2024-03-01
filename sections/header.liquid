@@ -44,8 +44,8 @@
     </div>
     <div class="menu">
       <nav class="navigation">
-        {% if linklists.rt-menu.links %}
-          {% for link in linklists.rt-menu %}
+        {% if linklists.rt-menu %}
+          {% for link in linklists.rt-menu.links %}
             <div class="menu-item {% if link.url == request.path %} current-page {% endif %} ">
               <svg
                 width="92"
