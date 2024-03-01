@@ -1164,6 +1164,9 @@ html.dark main .divsection-03 .section-container .banner-and-cta .btn-primary a 
   stroke: #242B2F;
 }
 
+main .divsection-04 {
+  padding-top: 0 !important;
+}
 main .divsection-04 .section-container {
   overflow-x: hidden;
 }
