@@ -1311,6 +1311,9 @@ main .divsection-05 .section-container .swiper-testimonials-arrows {
   align-items: center;
   gap: 30px;
 }
+main .divsection-05 .section-container .swiper-testimonials-arrows:hover {
+  cursor: pointer;
+}
 main .divsection-05 .section-container .swiper-testimonials-arrows svg {
   width: 25px;
   height: auto;
