@@ -194,6 +194,10 @@
     "section-06": {
       "type": "section-06",
       "settings": {
+        "section_06_title": "Learn more about our listing process, as well as our additional staging and design work.",
+        "section_06_cta_text": "Contact Us",
+        "section_06_cta_url": "",
+        "section_06_image": "shopify:\/\/shop_images\/rt-image-16.webp"
       }
     }
   },
