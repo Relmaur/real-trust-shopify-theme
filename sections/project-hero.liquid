@@ -1,6 +1,19 @@
+<div class="divsection-01 hero">
+  <div class="section-container full">
+    <h1>{{ section.settings.section_01.title }}</h1>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Hero",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Hero Title",
+        "default": "Project Hero Section"
+    }
+  ]
+}
 {% endschema %}
