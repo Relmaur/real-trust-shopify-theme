@@ -3,6 +3,7 @@
     "hero": {
       "type": "project-hero",
       "settings": {
+        "title": "{{ page.title }}"
       }
     }
   },
