@@ -90,7 +90,7 @@
         "section_03_row3_title": "Marketing",
         "section_03_row3_text": "<p>Staging consultation, professional photos and a sophisticated digital marketing planaccompany every listing to reach today's buyers.<\/p>",
         "section_03_row3_image_alt": "",
-        "section_03_banner_text": "<p>Fifteen years of <span>experience<\/span> in real estate, excellent customer service and a commitment to work hard, listen and follow through. We provide quality service to build relationships with clients and, more importantly, maintain those relationships by communicating effectively.<\/p>",
+        "section_03_banner_text": "<p>Fifteen years of experience in real estate, excellent customer service and a commitment to work hard, listen and follow through. We provide quality service to build relationships with clients and, more importantly, maintain those relationships by communicating effectively.<\/p>",
         "section_03_banner_cta_text": "Contact Us",
         "section_03_banner_cta_url": "#"
       }
@@ -98,8 +98,9 @@
     "section-04": {
       "type": "section-04",
       "settings": {
+        "section_04_project_01_background_image": "shopify:\/\/shop_images\/rt-image-10.webp",
         "section_04_project_01_image_alt": "",
-        "section_04_project_01_title": "",
+        "section_04_project_01_title": "S",
         "section_04_project_01_location": "",
         "section_04_project_01_area": "",
         "section_04_project_01_time": "",
