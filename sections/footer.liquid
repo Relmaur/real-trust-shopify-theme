@@ -94,11 +94,11 @@
     </div>
     <div class="column-3">
       <div class="sub_column-1">
-        {% assign services_link = linklists['rt-menu'].links | where: 'title', 'Services' | first %}
+        {% assign services_link = linklists.rt-menu.links | where: 'title', 'Services' | first %}
         <a href="{{ services_link.url }}">Services</a>
         {% if services_link.links %}
           <ul>
-            {% for childLink in testimonials_links %}
+            {% for childLink in services_link %}
               <li>
                 <a href="{{ childLink.url }}">{{ childLink.title }}</a>
               </li>
@@ -107,11 +107,11 @@
         {% endif %}
       </div>
       <div class="sub_column-2">
-        {% assign about_link = linklists['rt-menu'].links | where: 'title', 'About Projects' | first %}
+        {% assign about_link = linklists.rt-menu.links | where: 'title', 'About Projects' | first %}
         <a href="{{ about_link.url }}">About Projects</a>
         {% if about_link.links %}
           <ul>
-            {% for childLink in testimonials_links %}
+            {% for childLink in about_link %}
               <li>
                 <a href="{{ childLink.url }}">{{ childLink.title }}</a>
               </li>
@@ -120,11 +120,11 @@
         {% endif %}
       </div>
       <div class="sub_column-3">
-        {% assign testimonials_link = linklists['rt-menu'].links | where: 'title', 'Testimonials' | first %}
+        {% assign testimonials_link = linklists.rt-menu.links | where: 'title', 'Testimonials' | first %}
         <a href="{{ testimonials_link.url }}">Testimonials</a>
         {% if testimonials_link.links %}
           <ul>
-            {% for childLink in testimonials_links %}
+            {% for childLink in testimonials_link %}
               <li>
                 <a href="{{ childLink.url }}">{{ childLink.title }}</a>
               </li>
