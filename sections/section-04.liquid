@@ -2,13 +2,10 @@
   <div class="section-container full">
     <div class="title-and-text">
       <div class="title">
-        <h2>Know our Projects</h2>
+        <h2>{{ section.settings.section_04_title }}</h2>
       </div>
       <div class="text">
-        <p>
-          We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of
-          their homes.
-        </p>
+        {{ section.settings.section_04_subtitle }}
       </div>
     </div>
 
@@ -786,6 +783,18 @@
 {
   "name": "Section 4 - Projects Grid",
   "settings": [
+    {
+      "type": "text",
+      "id": "section_04_title",
+      "label": "Section Title",
+      "default": "Know Our Projects"
+    },
+    {
+      "type": "richtext",
+      "id": "section_04_subtitle",
+      "label": "Section Subitle",
+      "default": "<p>We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of their homes.</p>"
+    },
     {
       "type": "image_picker",
       "id": "section_04_project_01_background_image",
