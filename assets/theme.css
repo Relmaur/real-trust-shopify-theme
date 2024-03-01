@@ -400,7 +400,7 @@ html body input {
 html body input:focus {
   outline: none;
 }
-html body div[class|=divsection]:first-child {
+html body .shopify-section:first-child {
   padding: calc(90px + 4%) 0 3.5% 0;
 }
 html body div[class|=divsection] {
