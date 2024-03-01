@@ -98,7 +98,7 @@
         <a href="{{ services_link.url }}">Services</a>
         {% if services_link.links %}
           <ul>
-            {% for childLink in services_link %}
+            {% for childLink in services_link.links %}
               <li>
                 <a href="{{ childLink.url }}">{{ childLink.title }}</a>
               </li>
@@ -111,7 +111,7 @@
         <a href="{{ about_link.url }}">About Projects</a>
         {% if about_link.links %}
           <ul>
-            {% for childLink in about_link %}
+            {% for childLink in about_link.links %}
               <li>
                 <a href="{{ childLink.url }}">{{ childLink.title }}</a>
               </li>
@@ -124,7 +124,7 @@
         <a href="{{ testimonials_link.url }}">Testimonials</a>
         {% if testimonials_link.links %}
           <ul>
-            {% for childLink in testimonials_link %}
+            {% for childLink in testimonials_link.links %}
               <li>
                 <a href="{{ childLink.url }}">{{ childLink.title }}</a>
               </li>
